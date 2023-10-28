@@ -13,7 +13,7 @@ const CardSlider = () => {
           <View style={tw`bg-[#f3f3f3] my-14 w-40 h-52 self-center items-center rounded-[28px] mx-5`}>
             <Avatar.Image
               size={100}
-              style={tw`mt-5 absolute bottom-40 bg-white`}
+              style={tw`mt-5 absolute bottom-40 bg-transparent`}
               source={require('../assets/images/Tomato.png')} 
             />
             <Text 
@@ -34,7 +34,7 @@ const CardSlider = () => {
           <View style={tw`bg-[#f3f3f3] my-14 w-40 h-52 self-center items-center rounded-[28px]`}>
             <Avatar.Image 
               size={100}
-              style={tw`mt-5 absolute bottom-40 bg-white`}
+              style={tw`mt-5 absolute bottom-40 bg-transparent`}
               source={require('../assets/images/Fish.png')}
             />
             <Text 
@@ -55,18 +55,18 @@ const CardSlider = () => {
           <View style={tw`bg-[#f3f3f3] my-14 w-40 h-52 self-center items-center rounded-[28px] mx-5`}>
             <Avatar.Image
               size={100}
-              style={tw`mt-5 absolute bottom-40 bg-white`}
-              source={require('../assets/images/Tomato.png')} 
+              style={tw`mt-5 absolute bottom-40 bg-transparent`}
+              source={require('../assets/images/Chicken.png')} 
             />
             <Text 
               style={tw`text-center text-black px-4 text-lg font-medium mt-16`}
             >
-              Veggie tomato mix 
+              Moi-moi and ekpa. 
             </Text>
             <Text 
               style={tw`text-[#ea580c] pt-2 text-base font-medium`}
             >
-              Price <Text style={tw`text-lg`}>$4</Text>
+              Price <Text style={tw`text-lg`}>$3</Text>
             </Text>
           </View>
         </TouchableOpacity>
@@ -76,13 +76,13 @@ const CardSlider = () => {
           <View style={tw`bg-[#f3f3f3] my-14 w-40 h-52 self-center items-center rounded-[28px] mr-5`}>
             <Avatar.Image 
               size={100}
-              style={tw`mt-5 absolute bottom-40 bg-white`}
-              source={require('../assets/images/Fish.png')}
+              style={tw`mt-5 absolute bottom-40 bg-transparent`}
+              source={require('../assets/images/Egg.png')}
             />
             <Text 
               style={tw`text-center text-black px-4 text-lg font-medium mt-16`}
             >
-              Spicy fish sauce
+              Egg and cucumber...
             </Text>
             <Text 
               style={tw`text-[#ea580c] pt-2 text-base font-medium`}

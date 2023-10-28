@@ -10,7 +10,7 @@ const AuthNavigator = () => {
     <Auth.Navigator
       screenOptions={{
         cardStyle:{
-          backgroundColor:'#fff'
+          backgroundColor:'white'
         }
       }}
     >

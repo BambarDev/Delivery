@@ -18,7 +18,7 @@ const Categories = () => {
               source={require('../assets/icons/Food.png')}
             />
           )}
-          style={tw`w-36 h-15 bg-white rounded-[28px] border border-[#d97706] justify-center self-center mx-5`}
+          style={tw`w-36 h-15 bg-transparent rounded-[28px] border border-[#d97706] justify-center self-center mx-5`}
           onPress={() => console.log('Pressed')}
         >
           <Text style={tw`text-[#d97706] text-center font-sans text-xl not-italic font-bold leading-normal`}>
@@ -36,7 +36,7 @@ const Categories = () => {
               source={require('../assets/icons/Drink.png')}
             />
           )}
-          style={tw`w-36 h-15 bg-white rounded-[28px] border border-[#db2777] justify-center self-center`}
+          style={tw`w-36 h-15 bg-transparent rounded-[28px] border border-[#db2777] justify-center self-center`}
           onPress={() => console.log('Pressed')}
         >
           <Text style={tw`text-[#db2777] text-center font-sans text-xl not-italic font-bold leading-normal`}>
@@ -54,7 +54,7 @@ const Categories = () => {
               source={require('../assets/icons/Snack.png')}
             />
           )}
-          style={tw`w-36 h-15 bg-white rounded-[28px] border border-[#ca8a04] justify-center self-center mx-5`}
+          style={tw`w-36 h-15 bg-transparent rounded-[28px] border border-[#ca8a04] justify-center self-center mx-5`}
           onPress={() => console.log('Pressed')}
         >
           <Text style={tw`text-[#ca8a04] text-center font-sans text-xl not-italic font-bold leading-normal`}>
@@ -72,7 +72,7 @@ const Categories = () => {
               source={require('../assets/icons/Sauce.png')}
             />
           )}
-          style={tw`w-36 h-15 bg-white rounded-[28px] border border-[#ea580c] justify-center self-center mr-5`}
+          style={tw`w-36 h-15 bg-transparent rounded-[28px] border border-[#ea580c] justify-center self-center mr-5`}
           onPress={() => console.log('Pressed')}
         >
           <Text style={tw`text-[#ea580c] text-center font-sans text-xl not-italic font-bold leading-normal`}>

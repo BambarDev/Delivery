@@ -13,7 +13,7 @@ const HomeScreen = () => {
       </Text>
       <Searchbar
         placeholder='Search'
-        style={tw`w-96 self-center bg-white rounded-[28px] border border-[#d97706]`}
+        style={tw`w-96 self-center bg-transparent rounded-[28px] border border-[#d97706]`}
         placeholderTextColor='#db2777'
         icon={() => (
           <Image
