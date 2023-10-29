@@ -32,10 +32,10 @@ const Account = ({ title, children, passClick, passTitle, onClick, buttonTitle, 
           {buttonTitle}
         </Text>
       </Button>
-      <Text style={tw`text-base font-sans text-[#6b7280] font-normal text-center not-italic leading-normal inset-x-0 top-44 mt-2`}>
+      <Text style={tw`text-sm font-sans text-[#6b7280] font-normal text-center not-italic leading-normal inset-x-0 top-44 mt-3`}>
         {accTitle} <Text 
           onPress={subClick}
-          style={tw`text-base font-sans text-[#6b7280] font-bold text-center not-italic leading-normal`}        
+          style={tw`text-sm font-sans text-[#6b7280] font-bold text-center not-italic leading-normal`}        
         >
           {subTitle}
         </Text>

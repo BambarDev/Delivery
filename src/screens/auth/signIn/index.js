@@ -1,9 +1,12 @@
 import tw from 'twrnc'
-import React from 'react'
+import React, { useState } from 'react'
 import Account from '../../../components/account'
 import { TextInput } from 'react-native-paper'
 
 const SignIn = ({ navigation }) => {
+  const [ phone, setPhone ] = useState('')
+  const [ password, setPassword ] = useState('')
+
   return (
     <Account
       title='Sign In'
@@ -12,16 +15,18 @@ const SignIn = ({ navigation }) => {
       onClick={() => navigation.navigate('')}
       buttonTitle='Sign In'
       accTitle="Don't have account?"
-      subClick={() => navigation.navigate('')}
-      subTitle='Sign Up'
+      subClick={() => navigation.navigate('register')}
+      subTitle='Register'
     >
       <TextInput
         mode='flat'
+        value={phone}
         label='Phone'
         maxLength={8}
         textColor='#db2777'
-        keyboardType='number-pad'
+        onChangeText={setPhone}
         underlineColor='#db2777'
+        keyboardType='number-pad'
         activeUnderlineColor='#db2777'
         style={tw`w-80 h-14 bg-transparent text-sm font-sans font-semibold not-italic self-center leading-normal mt-5`}
         theme={{ 
@@ -32,10 +37,12 @@ const SignIn = ({ navigation }) => {
       />
       <TextInput
         mode='flat'
+        value={password}
         label='Password'
         textColor='#db2777'
         secureTextEntry={true}
         underlineColor='#db2777'
+        onChangeText={setPassword}
         activeUnderlineColor='#db2777'
         style={tw`w-80 h-14 bg-transparent text-sm font-sans font-semibold not-italic self-center leading-normal my-4`}
         theme={{ 
