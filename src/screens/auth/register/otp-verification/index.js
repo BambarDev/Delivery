@@ -4,23 +4,23 @@ import { TextInput } from 'react-native-paper';
 import OtpVerify from '../../../../components/otpVerify';
 
 const OtpVerification = ({ route, navigation }) => {
-  // const { confirmation } = route.params
-  // const [ code, setCode ] = useState('');
+  const { context } = route.params
+  const [ code, setCode ] = useState('');
 
-  // const confirmCode = async () => {
-  //   try {
-  //     await confirmation.confirm(code);
-  //     console.log('Phone number confirmed!');
-  //     navigation.navigate('account-success')
-  //   } catch (error) {
-  //     console.log('Invalid code.');
-  //   }
-  // }
+  const confirmCode = async () => {
+    try {
+      await confirmation.confirm(code);
+      console.log('Phone number confirmed!');
+      navigation.navigate('account-success')
+    } catch (error) {
+      console.log('Invalid code.');
+    }
+  }
 
   return (
     <OtpVerify 
       title='OTP Verification'
-      description='An 4 digit code has been sent to 99999999'
+      description={`An 4 digit code has been sent to ${context.phone}`}
       codeTitle='Didn’t get the code?'
       onClick={() => navigation.navigate('account-success')}
       sendTitle='Resend'
@@ -28,12 +28,12 @@ const OtpVerification = ({ route, navigation }) => {
       buttonTitle='Submit'
     >
       <TextInput
-        // value={code}
+        value={code}
         maxLength={6}
         mode='outlined'
         placeholder='OTP'
         textColor='#db2777'
-        // onChangeText={setCode}
+        onChangeText={setCode}
         keyboardType='numeric'
         outlineColor='#db2777'
         activeOutlineColor='#db2777'

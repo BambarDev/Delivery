@@ -1,7 +1,7 @@
 import React from 'react';
 import Success from '../../../../components/success';
 
-const AccountSuccess = ({ navigation }) => {
+const AccountSuccess = ({ route, navigation }) => {
   return (
     <Success 
       title='Welcome to Delivery'

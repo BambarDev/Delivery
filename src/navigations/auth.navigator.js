@@ -11,7 +11,6 @@ const Auth = createStackNavigator()
 const AuthNavigator = () => {
   return (
     <Auth.Navigator
-      initialRouteName={'otp-verification'}
       screenOptions={{
         cardStyle:{
           backgroundColor:'white'

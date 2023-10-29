@@ -2,17 +2,32 @@ import tw from 'twrnc'
 import React, { useState } from 'react'
 import Account from '../../../components/account'
 import { TextInput } from 'react-native-paper'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const SignIn = ({ navigation }) => {
   const [ phone, setPhone ] = useState('')
   const [ password, setPassword ] = useState('')
+
+  const signIn = async () => {
+    try {
+      const storedPhone = await AsyncStorage.getItem('phone');
+      const storedPassword = await AsyncStorage.getItem('password');
+      if(phone === storedPhone && password === storedPassword) {
+        await AsyncStorage.setItem('authenticated','true');
+      } else {
+        console.log('Invalid phone number or password.');
+      }
+    } catch (error) {
+      console.log('Error during login:', error);
+    }
+  }
 
   return (
     <Account
       title='Sign In'
       passClick={() => console.log('Pressed')}
       passTitle='Forgot password?'
-      onClick={() => navigation.navigate('')}
+      onClick={() => signIn()}
       buttonTitle='Sign In'
       accTitle="Don't have account?"
       subClick={() => navigation.navigate('register')}

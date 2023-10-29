@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { TextInput } from 'react-native-paper'
 import Account from '../../../components/account'
 import { firebase } from '@react-native-firebase/auth'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const Register = ({ navigation }) => {
   const [ phone, setPhone ] = useState('');
@@ -10,12 +11,37 @@ const Register = ({ navigation }) => {
   const [ cpassword, setCPassword ] = useState('');
   const countryCode = '+976';
   
-  const handleSendOTP = async() => {
-    try{
-      const confirmation = await firebase.auth().signInWithPhoneNumber(countryCode+phone);
-      navigation.navigate('otp-verification',{ confirmation });
+ const storeCredentials = async (phone, pass) => {
+    try {
+      // Store phone number and password in AsyncStorage
+      await AsyncStorage.setItem('phoneNumber', phone);
+      await AsyncStorage.setItem('password', pass);
     } catch (error) {
-      console.log('Error sending code: ', error);
+      console.error('Error storing credentials:', error);
+      // Handle error
+    }
+  };
+  const handleSendOTP = async() => {
+    if(phoneNumber && password) {
+      try{
+        await store(phoneNumber, password);
+        
+        if (!phoneNumber) {
+          console.error('Phone number is undefined');
+          return;
+        }
+
+        const confirmation = await firebase.auth().signInWithPhoneNumber(countryCode+phone);
+        navigation.navigate('otp-verification', { 
+          confirmation, 
+          phone, 
+          password 
+        });
+      } catch (error) {
+        console.error('Phone verification error:', error);
+      }
+    } else {
+      console.error('Please enter phone number and password');
     }
   }
 
@@ -32,7 +58,7 @@ const Register = ({ navigation }) => {
         mode='flat'
         label='Phone'
         value={phone}
-        maxLength={12}
+        maxLength={8}
         textColor='#db2777'
         onChangeText={setPhone}
         underlineColor='#db2777'
