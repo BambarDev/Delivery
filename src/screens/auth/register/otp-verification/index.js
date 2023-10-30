@@ -16,13 +16,13 @@ const OtpVerification = ({ route, navigation }) => {
       console.log('Invalid code.');
     }
   }
-
+  
   return (
     <OtpVerify 
       title='OTP Verification'
-      description={`An 4 digit code has been sent to ${context.phone}`}
+      description={`An 4 digit code has been sent to 99999999`}
       codeTitle='Didn’t get the code?'
-      onClick={() => navigation.navigate('account-success')}
+      onClick={() => confirmCode()}
       sendTitle='Resend'
       secondTitle='In 60 second(s)'
       buttonTitle='Submit'

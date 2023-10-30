@@ -26,13 +26,13 @@ const Account = ({ title, children, passClick, passTitle, onClick, buttonTitle, 
       <Button
         mode='contained'
         onPress={onClick}
-        style={tw`w-80 h-14 bg-[#db2777] rounded-7 self-center justify-center inset-x-0 top-44`}
+        style={tw`w-80 h-14 bg-[#db2777] rounded-7 self-center justify-center inset-x-0 top-52`}
       >
         <Text style={tw`text-xl font-sans text-white font-bold text-center not-italic leading-normal`}>
           {buttonTitle}
         </Text>
       </Button>
-      <Text style={tw`text-sm font-sans text-[#6b7280] font-normal text-center not-italic leading-normal inset-x-0 top-44 mt-3`}>
+      <Text style={tw`text-sm font-sans text-[#6b7280] font-normal text-center not-italic leading-normal inset-x-0 top-52 mt-3`}>
         {accTitle} <Text 
           onPress={subClick}
           style={tw`text-sm font-sans text-[#6b7280] font-bold text-center not-italic leading-normal`}        
