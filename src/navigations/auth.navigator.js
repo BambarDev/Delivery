@@ -29,7 +29,7 @@ const AuthNavigator = () => {
         name='register'
         component={ Register }
         options={{
-          headerTitle:'Sign Up',
+          headerTitle:'Register',
           headerShown: false
         }}
       />

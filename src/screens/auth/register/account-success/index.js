@@ -1,5 +1,5 @@
-import React from 'react';
-import Success from '../../../../components/success';
+import React from 'react'
+import Success from '../../../../components/success'
 
 const AccountSuccess = ({ route, navigation }) => {
   return (

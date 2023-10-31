@@ -1,6 +1,6 @@
 import tw from 'twrnc'
 import React from 'react'
-import { Avatar, IconButton, Text } from 'react-native-paper'
+import { Avatar, Text } from 'react-native-paper'
 import { ScrollView, TouchableOpacity, View } from 'react-native'
 
 const CardSlider = () => {

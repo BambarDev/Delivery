@@ -1,10 +1,9 @@
-import tw from 'twrnc';
-import React, { useState } from 'react';
-import { TextInput } from 'react-native-paper';
-import OtpVerify from '../../../../components/otpVerify';
+import tw from 'twrnc'
+import React, { useState } from 'react'
+import { TextInput } from 'react-native-paper'
+import OtpVerify from '../../../../components/otpVerify'
 
-const OtpVerification = ({ route, navigation }) => {
-  const { context } = route.params
+const OtpVerification = ({ route : { params : {confirmation, phoneNumber } }, navigation }) => {
   const [ code, setCode ] = useState('');
 
   const confirmCode = async () => {
@@ -20,7 +19,7 @@ const OtpVerification = ({ route, navigation }) => {
   return (
     <OtpVerify 
       title='OTP Verification'
-      description={`An 4 digit code has been sent to 99999999`}
+      description={`An 4 digit code has been sent to ${phoneNumber}`}
       codeTitle='Didn’t get the code?'
       onClick={() => confirmCode()}
       sendTitle='Resend'

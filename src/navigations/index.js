@@ -1,8 +1,8 @@
-import React, { useDeferredValue, useEffect, useState } from 'react'
+import React from 'react'
+import useAuth from '../hooks/useAuth'
+import HomeNavigator from './home.navigator'
 import AuthNavigator from './auth.navigator'
 import { NavigationContainer } from '@react-navigation/native'
-import HomeNavigator from './home.navigator';
-import useAuth from '../hooks/useAuth';
 
 const RootNavigator = () => {
   const { user } = useAuth();

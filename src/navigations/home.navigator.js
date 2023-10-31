@@ -2,7 +2,10 @@ import tw from 'twrnc'
 import React from 'react'
 import HomeScreen from '../screens/main/home'
 import { Image, TouchableOpacity, View } from 'react-native'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { getAuth, signOut } from '@react-native-firebase/auth'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+
+const auth = getAuth();
 
 const Tab = createBottomTabNavigator();
 
@@ -21,10 +24,10 @@ const HomeNavigator = () => {
           </TouchableOpacity>
         ),
         headerRight: () => (
-          <TouchableOpacity onPress={() => console.log('Pressed')}>
+          <TouchableOpacity onPress={() => signOut(auth)}>
             <Image 
               style={[tw`w-9 h-9 mr-4`, {tintColor:'#6b7280'}]}
-              source={require('../assets/icons/Cart.png')}
+              source={require('../assets/icons/Logout.png')}
             />
           </TouchableOpacity>
         ),

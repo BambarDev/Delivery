@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "259981075307",
-    "project_id": "delivery-app-71c73",
-    "storage_bucket": "delivery-app-71c73.appspot.com"
+    "project_number": "574684472171",
+    "project_id": "delivery-1634e",
+    "storage_bucket": "delivery-1634e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:259981075307:android:83bb2cff5dd0de4118a22e",
+        "mobilesdk_app_id": "1:574684472171:android:d347acdfbe47f6a404e22e",
         "android_client_info": {
           "package_name": "com.delivery"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBkNuoQ22lYtm1wuKkkN7KYq3ZBXSghuLU"
+          "current_key": "AIzaSyDPEFvBN7ykRxjpMxRhKUAX7s8BqKEOwRE"
         }
       ],
       "services": {

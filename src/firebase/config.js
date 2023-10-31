@@ -1,16 +1,14 @@
-import firebase from '@react-native-firebase/app'
+import { initializeApp } from 'firebase/app'
 import '@react-native-firebase/auth'
 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCfJS4_Wc0keazm7w2RNvB-qQ1ZS5kfP6o",
-  authDomain: "delivery-app-71c73.firebaseapp.com",
-  projectId: "delivery-app-71c73",
-  storageBucket: "delivery-app-71c73.appspot.com",
-  messagingSenderId: "259981075307",
-  appId: "1:259981075307:web:a05b272d5bbcac0318a22e"
+  apiKey: "AIzaSyAwtVJ0ziV_If0fA4_djSfD21NKnAFHjn0",
+  authDomain: "delivery-1634e.firebaseapp.com",
+  projectId: "delivery-1634e",
+  storageBucket: "delivery-1634e.appspot.com",
+  messagingSenderId: "574684472171",
+  appId: "1:574684472171:web:2084ce196c6732f504e22e"
 };
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
-
+const app = initializeApp(firebaseConfig);
