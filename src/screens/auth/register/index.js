@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { TextInput } from 'react-native-paper'
 import Account from '../../../components/account'
 import { getAuth, signInWithPhoneNumber } from '@react-native-firebase/auth'
+import { LogBox } from 'react-native';
 
 const auth = getAuth();
 
@@ -11,10 +12,14 @@ const Register = ({ navigation }) => {
   const [ password, setPassword ] = useState('');
   const countryCode = '+976';
 
-  const signUp = async(phone, password) => {
+  LogBox.ignoreLogs([
+    'Non-serializable values were found in the navigation state',
+  ]);
+  
+  const signUp = async() => {
     try{
       const confirmation = await signInWithPhoneNumber(auth, countryCode+phone);
-      navigation.navigate('otp-verification',{ confirmation, phoneNumber: phone });
+      navigation.navigate('otp-verification',{ confirmation, phone });
     } catch (error) {
       console.log('Error sending code: ', error);
     }

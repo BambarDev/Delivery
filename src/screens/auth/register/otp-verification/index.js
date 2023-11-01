@@ -3,14 +3,16 @@ import React, { useState } from 'react'
 import { TextInput } from 'react-native-paper'
 import OtpVerify from '../../../../components/otpVerify'
 
-const OtpVerification = ({ route : { params : {confirmation, phoneNumber } }, navigation }) => {
+const OtpVerification = ({ route, navigation }) => {
+  const { confirmation, phone } = route.params  
   const [ code, setCode ] = useState('');
 
-  const confirmCode = async () => {
+  const confirmCode = async () => { 
     try {
       await confirmation.confirm(code);
-      console.log('Phone number confirmed!');
+      console.log(confirmation)
       navigation.navigate('account-success')
+      console.log('Phone number confirmed!');
     } catch (error) {
       console.log('Invalid code.');
     }
@@ -19,7 +21,7 @@ const OtpVerification = ({ route : { params : {confirmation, phoneNumber } }, na
   return (
     <OtpVerify 
       title='OTP Verification'
-      description={`An 4 digit code has been sent to ${phoneNumber}`}
+      description={`An 4 digit code has been sent to ${phone}`}
       codeTitle='Didn’t get the code?'
       onClick={() => confirmCode()}
       sendTitle='Resend'

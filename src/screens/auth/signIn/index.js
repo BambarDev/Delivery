@@ -2,11 +2,12 @@ import tw from 'twrnc'
 import React, { useState } from 'react'
 import { TextInput } from 'react-native-paper'
 import Account from '../../../components/account'
+import { auth, signInWithPhoneNumber } from '@react-native-firebase/auth'
 
 const SignIn = ({ navigation }) => {
   const [ phone, setPhone ] = useState('')
   const [ password, setPassword ] = useState('')
-  
+
   return (
     <Account
       title='Sign In'
